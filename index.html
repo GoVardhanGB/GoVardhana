@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govardhana Giri's Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(252, 255, 75, 0.562);
+            z-index: 100;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(54, 54, 54);
+            font-size: 14px;
+            padding: 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #555555;
+        }
+
+        /* Active Menu Link */
+        nav a.active {
+            color: #555555;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .clse {
+            display: none;
+            font-size: 30px;
+            color: #555;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        /* Mobile & Tablet View */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .clse {
+                display: block;
+            }
+
+            nav a {
+                padding: 15px;
+            }
+        }
+
+        .section {
+            padding: 60px 30px;
+        }
+
+         /* HOME Section */
+
+        #home {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10%;            
+            flex-wrap: wrap;
+        }
+
+        #home .intro {
+            flex: 1;
+            max-width: 100%;
+            text-align: left;
+            padding-top: 5%; 
+            padding-left: 5%;
+            margin-bottom: 15px;
+            line-height: 60px;
+            color: #555555;
+        }
+
+        .home{        
+            justify-content: center;
+            padding-top: 7%;
+        }
+
+        /* Logo  */
+
+    .logo{	
+    float: right;  
+    padding-right: 5%;  
+    }    
+    
+
+    .download{	
+	    padding-inline:40px;  	
+        padding-top: 15px;
+        padding-bottom: 15px;
+    	font-size:20px;
+    	text-decoration:none;    	
+    	color:#555555;        
+	    width: 40px;
+    	height:40px;
+    	border-radius: 5px;
+    	border: 1.2px solid #555555;
+    	transition: transform .1s; 	
+    }
+
+    .download:hover{
+	    background-color: #657cfd;	  
+        color: white;         
+        transition: transform .9s; 	
+	    -ms-transform: scale(1.1); /* IE 9  */
+	    -webkit-transform: scale(1.1); /* Safari 3-8  */
+	    transform: scale(1.1);
+	    transform: scale(1.1);	
+    }
+
+
+
+    .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+    }
+
+    .section p {
+            font-size: 18px;
+            color: #555;
+    }
+
+    /* About  */
+    #about{
+            color: #555555;
+            font-size: 16px;
+            line-height: 24px;
+    }
+
+    .skills{
+            width: 40%;            
+    }
+
+    .skls{
+        padding-left: 30%;
+    }
+
+    .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
+            border: 0.9px solid rgb(155, 155, 155);
+            padding: 6px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            transition: transform .4s;
+        }
+
+    .figma:hover, .figjam:hover, .sketch:hover, .invision:hover, .balsamiq:hover, .lucidchart:hover, .axurerp:hover, .xd:hover, .ps:hover, .illustrator:hover, .blender:hover, .github:hover, .oliveeditor:hover, .audacity:hover, .html:hover, .css:hover, .js:hover, .np:hover, .vs:hover {
+            background-color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+
+    .Image{
+            float: left;      
+            position: absolute;
+            padding-left: 5%;      
+            padding-top: 2%;
+            opacity: 0.7;
+            transition: 2s;
+            margin: 0 auto;
+    }
+    .Image:hover{
+            opacity: 1;
+            transition: 4s;
+    }
+
+    .Image:hover {
+        -ms-transform: scale(1.2); /* IE 9  */
+        -webkit-transform: scale(1.2); /* Safari 3-8  */
+        transform: scale(1.2); 
+    }
+
+    .abt{
+        padding-top: 1%;        
+        padding-left: 30%;
+        max-width: 70%;
+        color: #555555;
+    }
+
+    .left{
+        float: left;
+        padding-left: 2%;
+        color: #555555;
+        font-size: 18px;
+        max-width: 340px;
+    }
+
+/* Projects */
+.portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+    }
+
+    .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;            
+            padding: 20px;            
+    }
+    .card {
+            background-color: #ddddddc0;
+            border-radius: 8px;            
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            margin: 15px 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    .card:hover {
+            transform: translateY(-5px);
+    }
+    .card h3 {
+            font-size: 24px;
+            color: #555555;
+            margin: 15px 0 10px 0; /* Spacing around the title */
+            text-align: left; /* Align title to the left */
+            width: 100%; /* Ensure it takes full width for proper alignment */
+    }
+    .card p {
+            font-size: 18px;
+            color: #666;
+            margin-top: 10px;
+            text-align: left; /* Align paragraph to the left */
+            width: 100%; /* Ensure it takes full width for proper alignment */
+    }
+    .card a {
+            display: inline-block;
+            margin-top: 16px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            text-align: left; /* Align link to the left */
+            width: 100%; /* Ensure it takes full width for proper alignment */
+    }
+    .card img {
+            display: block;
+            margin: 0 auto 15px; /* Center the image and add space below it */
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+    }
+
+        /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+    }
+
+    /* Contact  */
+    .contact{		
+        padding-right: 30%;
+        padding-bottom: 4%;
+        padding-left: 3%;
+        text-align: left;
+	    font-family: 'Times New Roman';		    
+	    color:#555555;
+	    font-size:20px;
+    }
+
+    #ty{
+	    font-family:'Great Vibes';	
+	    font-size:60px;		    
+        text-align: center;
+	    line-height:90px;
+	    letter-spacing:4px;
+	    background: linear-gradient(90deg, rgba(255,195,120,1) 0%, rgba(193,122,34,1) 50%, rgba(255,195,120,1) 80%);
+	    -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text;
+    }
+
+    /* Footer */
+    footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+    }
+
+    footer a {
+            color: #ff5722;
+            text-decoration: none;
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="menu">
+            <li><a href="#home" onclick="setActive('home')">HOME</a></li>
+            <li><a href="#about" onclick="setActive('about')">ABOUT</a></li>
+            <li><a href="#projects" onclick="setActive('projects')">MY PROJECTS</a></li>
+            <li><a href="#contact" onclick="setActive('contact')">CONTACTS</a></li>
+        </ul>
+        <div class="clse" onclick="toggleMenu()">&times;</div>
+    </nav>
+
+    <!-- Sections -->
+    <div id="home" class="section">
+        <div class="intro">
+            <font style="font-size: 45px; font-weight: bold;">
+            Hi There, Welcome!<br>
+            I Am GOVARDHANA GIRI V<br>        
+            A Senior Technical Lead UI UX     
+            </font><br><br>
+            <a href="C:\Users\Admin\Downloads\Asset\GOVARDHANAGIRIV.pdf" target="_blank" download class="download">Download My Resume</a><br><br><br>
+        </div>
+            
+            <!--Logo -->
+        <div class="logo">
+            <img src="C:\Users\Admin\Downloads\Asset\Vardhan2.png" alt="Vardhan" width="350" height="400">
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <div class="Image">
+            <img src="C:\Users\Admin\Downloads\Asset\img.png" alt="Vardhan" height="250px">
+        </div        
+        <p>
+           <div class="abt">
+            This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.<br><br>
+            <strong style="font-size: 18px;"><u>UI/UX SKILLS</u>:</strong><br><br>
+            * User-Centered Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Design Thinking Methodology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Double Diamond Methodology<br>
+            * User Research Techniques&nbsp;&nbsp;(Qualitative and Quantitative)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Personas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            * Empathy Mapping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>*&nbsp;Information Architecture&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* White Boarding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Story Boarding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            * User Journey Mapping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>* Low & High-Fidelity Wireframing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Design System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* UI Style Guide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* UI Mock-Up Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            * Interactive Prototyping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* WCAG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Usability Testing&nbsp;&nbsp;&nbsp;&nbsp;* Heuristic Evaluation&nbsp;&nbsp;&nbsp;&nbsp;* VIMM Model.<br><br>          
+            <strong style="font-size: 18px;"><u>TOOLS & TECHNOLOGIES</u>:</strong><br><br>
+            </div>
+            <div class="left">
+                'I design user-centric, engaging, and responsive digital experiences.<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Let's bring the ideas to life!</u>
+            </div>            
+            <div class="skls">
+                <img class="figma" src="C:\Users\Admin\Downloads\Asset\figma.png" alt="Figma" style="width:80px">&nbsp;&nbsp;								
+                <img class="figjam" src="C:\Users\Admin\Downloads\Asset\figjam.png" alt="FigJam" style="width:80px">&nbsp;&nbsp;
+                <img class="sketch" src="C:\Users\Admin\Downloads\Asset\sketch.png" alt="Sketch" style="width:80px">&nbsp;&nbsp;
+                <img class="invision" src="C:\Users\Admin\Downloads\Asset\invision.png" alt="InVision" style="width:80px">&nbsp;&nbsp;
+                <img class="axurerp" src="C:\Users\Admin\Downloads\Asset\axurerp.png" alt="Axure RP" style="width:80px">&nbsp;&nbsp;
+                <img class="lucidchart" src="C:\Users\Admin\Downloads\Asset\lucidchart.png" alt="Lucidchart" style="width:80px">&nbsp;&nbsp;
+                <img class="balsamiq" src="C:\Users\Admin\Downloads\Asset\balsamiq.png" alt="Balsamiq" style="width:80px">&nbsp;&nbsp;<br>
+                <img class="xd" src="C:\Users\Admin\Downloads\Asset\xd.png" alt="Adobe XD" style="width:80px">&nbsp;&nbsp;
+                <img class="ps" src="C:\Users\Admin\Downloads\Asset\ps.png" alt="Photoshop" style="width:80px">&nbsp;&nbsp;
+                <img class="illustrator" src="C:\Users\Admin\Downloads\Asset\illustrator.png" alt="Illustrator" style="width:80px"><br>                
+                <img class="blender" src="C:\Users\Admin\Downloads\Asset\blender.png" alt="Blender" style="width:80px">&nbsp;&nbsp;
+                <img class="oliveeditor" src="C:\Users\Admin\Downloads\Asset\oliveeditor.png" alt="Olive Editor" style="width:80px">&nbsp;&nbsp;
+                <img class="audacity" src="C:\Users\Admin\Downloads\Asset\audacity.png" alt="Audacity" style="width:80px">&nbsp;&nbsp;<br>
+                <img class="github" src="C:\Users\Admin\Downloads\Asset\github.png" alt="GitHub" style="width:80px">&nbsp;&nbsp;
+                <img class="html" src="C:\Users\Admin\Downloads\Asset\html.png" alt="HTML" style="width:80px">&nbsp;&nbsp;
+                <img class="css" src="C:\Users\Admin\Downloads\Asset\css.png" alt="CSS" style="width:80px">&nbsp;&nbsp;
+                <img class="js" src="C:\Users\Admin\Downloads\Asset\js.png" alt="JavaScript" style="width:80px">&nbsp;&nbsp;
+                <img class="np" src="C:\Users\Admin\Downloads\Asset\np.png" alt="Node.js" style="width:80px">&nbsp;&nbsp;
+                <img class="vs" src="C:\Users\Admin\Downloads\Asset\vs.png" alt="Visual Studio" style="width:80px">
+            </div>		
+        </p>
+    </div>
+
+    <div id="projects" class="section">
+        <div class="container">
+            <!-- Project Card 1 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\ds.png" alt="DesignSystem">
+                <h3>Design System</h3>
+                <p>This contains a complete set of standards intended to manage design at scale using reusable components and patterns.</p>
+                <a href="C:\Users\Admin\Downloads\DS.html">View Case Study</a>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro1.png" alt="AR/VR Virtual Store">
+                <h3>AR/VR Virtual Store</h3>
+                <p>Users can explore immersive shopping experiences with AR/VR technology, transforming users' retail environments virtually.</p>
+                <a href="C:\Users\Admin\Downloads\VS.html">View Case Study</a>
+            </div>
+            <!-- Project Card 3 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro2.png" alt="AR/VR Planogram">
+                <h3>AR/VR Planogram</h3>
+                <p>Visualizing and optimizing product layouts using AR/VR for effective in-store merchandising and planning.</p>
+                <a href="C:\Users\Admin\Downloads\PG.html">View Case Study</a>
+            </div>
+            <!-- Project Card 4 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro3.png" alt="AR/VR WindMill">
+                <h3>AR/VR WindMill</h3>
+                <p>Experience realistic AR/VR windmill simulations for design, operation, and maintenance training.</p>
+                <a href="C:\Users\Admin\Downloads\WM.html">View Case Study</a>
+            </div>
+            <!-- Project Card 5 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro4.png" alt="Minerva IoT">
+                <h3>Minerva IoT</h3>
+                <p>Streamlining employee schedules, tasks, and communication with an intuitive mobile management platform.</p>
+                <a href="C:\Users\Admin\Downloads\MI.html">View Case Study</a>
+            </div>
+            <!-- Project Card 6 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro5.png" alt="MedTel">
+                <h3>MedTel</h3>
+                <p>Effortlessly schedule medical appointments and manage consultations with a user-friendly mobile app.</p>
+                <a href="C:\Users\Admin\Downloads\MT.html">View Case Study</a>
+            </div>
+            
+            <!-- Project Card 7 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro6.png" alt="StoreKing">
+                <h3>StoreKing</h3>
+                <p>Shop seamlessly with this feature-rich e-commerce app, offering secure payments and personalized recommendations.</p>
+                <a href="C:\Users\Admin\Downloads\SK.html">View Case Study</a>
+            </div>
+            <!-- Project Card 8 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro7.png" alt="EZ Event">
+                <h3>EZ Event</h3>
+                <p>Simplifying event ticket sales, bookings, and entry management through a robust web platform.</p>
+                <a href="C:\Users\Admin\Downloads\EZ.html">View Case Study</a>
+            </div>
+            <!-- Project Card 9 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\Pro8.png" alt="Patient Billing">
+                <h3>Patient Billing</h3>
+                <p>Manage and pay medical bills efficiently with a convenient, secure mobile billing solution.</p>
+                <a href="C:\Users\Admin\Downloads\PB.html">View Case Study</a>
+            </div>
+            <!-- Project Card 10 -->
+            <div class="card">
+                <img src="C:\Users\Admin\Downloads\Asset\gd.png" alt="Graphic Designing">
+                <h3>Graphic Designing</h3>
+                <p>This contains visually appealing designs that communicate messages effectively across various media.</p>
+                <a href="C:\Users\Admin\Downloads\GD.html">View Case Study</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="logo"> 
+            <img src="C:\Users\Admin\Downloads\Asset\Vardhan2.png" alt="Vardhan" width="350" height="400">
+        </div>	
+        <h1 id="ty" Style="size:50px">Thank You<br>for visiting my portfolio :)</h1>	
+            <div class="contact"><br>
+                <h2 style="font-size:18px; font-weight: bold; color:#555555;"><u>CONTACT</u>&nbsp;:-</h2>
+                    E-Mail:</b> v.govardhana@gmail.com<br>
+                    Phone :</b> (+91) 9849017183<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(+91) 7382435054<br>            
+            </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 UI/UX Designer Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle menu for mobile view
+        function toggleMenu() {
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('show');
+        }
+
+        // Set active section when clicked
+        function setActive(section) {
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+            const activeLink = document.querySelector(`nav a[href="#${section}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+
+        // Scroll event listener to add/remove active class based on the scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            let currentSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 0 && rect.bottom >= 0) {
+                    currentSection = section.id;
+                }
+            });
+            setActive(currentSection);
+        });
+
+        // Initialize active link based on scroll position when the page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            let currentSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 0 && rect.bottom >= 0) {
+                    currentSection = section.id;
+                }
+            });
+            setActive(currentSection);
+        });
+    </script>
+</body>
+</html>
