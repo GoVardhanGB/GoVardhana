@@ -78,6 +78,234 @@
             cursor: pointer;
         }
 
+        /* Section */
+        .section {
+            padding: 60px 30px;
+        }
+
+        /* HOME Section */
+        
+        #home {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10%;            
+            flex-wrap: wrap;
+        }
+
+        .logo{
+            float: right;
+            padding-right: 6%;
+        }
+
+        #home .intro {
+            flex: 1;
+            max-width: 100%;
+            text-align: left;
+            padding-top: 5%; 
+            padding-left: 7%;
+            margin-bottom: 15px;
+            line-height: 60px;
+            color: #555555;
+        }
+
+        .home{        
+            justify-content: center;
+            padding-top: 7%;
+        }
+    
+
+        .download{	
+	        padding-inline:40px;  	
+            padding-top: 15px;
+            padding-bottom: 15px;
+    	    font-size:20px;
+    	    text-decoration:none;    	
+    	    color:#555555;        
+	        width: 40px;
+    	    height:40px;
+    	    border-radius: 5px;
+    	    border: 1.2px solid #555555;
+    	    transition: transform .1s; 	
+        }
+
+        .download:hover{
+	        background-color: #657cfd;
+	        text-decoration: none;
+            color: white;         
+            transition: transform .9s; 	
+	        -ms-transform: scale(1.1); /* IE 9  */
+	        -webkit-transform: scale(1.1); /* Safari 3-8  */
+            transform: scale(1.1);
+	        transform: scale(1.1);	
+        }
+
+    
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* About Section */
+        .abt { 
+            font-size: 30px;
+            text-align: center;
+            padding: 0 12% 0 12%;
+        }
+
+        .capt {
+            text-align: center;
+            line-height: 20px;
+            padding-bottom: 3%;
+        }
+
+        .left {
+            padding-top: 3%;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .Image {
+            position: relative;
+            padding-left: 5%;
+            padding-top: 2%;
+            opacity: 0.7;
+            transition: 2s;
+            margin: 0 auto;
+        }
+
+        .Image:hover {
+            opacity: 1;
+            transition: 4s;
+            transform: scale(1.2); 
+        }
+
+        .skills {
+            padding: 0 12% 0 12%;
+        }
+
+        .tt {
+            padding: 5% 12% 0 12%;
+        }
+
+        .ic {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            gap: 2%;
+        }
+
+        .list {
+            padding: 2% 0 0 0;
+        }
+
+        .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
+            border: 0.9px solid rgb(155, 155, 155);
+            padding: 6px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+            transition: transform .4s;
+            width: 90px;
+            height: 60px;
+        }
+
+        .figma:hover, .figjam:hover, .sketch:hover, .invision:hover, .balsamiq:hover, .lucidchart:hover, .axurerp:hover, .xd:hover, .ps:hover, .illustrator:hover, .blender:hover, .github:hover, .oliveeditor:hover, .audacity:hover, .html:hover, .css:hover, .js:hover, .np:hover, .vs:hover {
+            background-color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+
+        /* Projects */
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%;
+            padding: 0 0 10% 0;
+        }
+
+        .card {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 480px; /* Can be adjusted to be responsive */
+            height: auto; /* Adjustable height */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin: 15px 0;
+        }
+
+        .p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: 600 ;
+            color: #657cfd;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        /* Contact  */
+        .contact{		
+            padding-top: 3%;
+            padding-right: 30%;        
+            padding-left: 7%;
+            text-align: left;
+	        color:#555555;
+	        font-size:16px;
+            line-height: 25px;
+        }
+
+        #ty{
+	        font-family:'Great Vibes';	
+	        font-size:60px;	
+            padding-left: 7%;	    
+            text-align: center;
+	        line-height:90px;
+	        letter-spacing:4px;
+	        background: linear-gradient(90deg, rgba(255,195,120,1) 0%, rgba(193,122,34,1) 50%, rgba(255,195,120,1) 80%);
+	        -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+
+
         /* Mobile & Tablet View */
         @media screen and (max-width: 768px) {
             nav ul {
@@ -106,230 +334,95 @@
             nav a {
                 padding: 15px;
             }
-        }
-        
-        /* Section */
-        .section {
-            padding: 60px 30px;
-        }
 
-         /* HOME Section */
+            .Image {
+                padding-left: 10%;
+                width: 80%;
+                margin-bottom: 20px;
+            }
 
-        #home {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 10%;            
-            flex-wrap: wrap;
-        }
+            .abt {
+                max-width: 100%;
+                text-align: center;
+                padding-left: 5%;
+            }
 
-        #home .intro {
-            flex: 1;
-            max-width: 100%;
-            text-align: left;
-            padding-top: 5%; 
-            padding-left: 5%;
-            margin-bottom: 15px;
-            line-height: 60px;
-            color: #555555;
-        }
+            .left {
+                max-width: 100%;
+                text-align: center;
+                padding-left: 0;
+            }
 
-        .home{        
-            justify-content: center;
-            padding-top: 7%;
-        }
+            .skls {
+                width: 100%;
+                padding-left: 0;
+                justify-content: center;
+            }
 
-        /* Logo  */
+            .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
+                width: 60px;
+                height: 40px;                
+                padding: 4px;
+            }
 
-         .logo{	
-             float: right;  
-            padding-right: 5%;  
-        }    
-    
+            /* About Section adjustments for mobile */
+            .abt {
+                padding: 0 5%;
+                font-size: 20px;
+            }
 
-        .download{	
-	    padding-inline:40px;  	
-            padding-top: 15px;
-            padding-bottom: 15px;
-    	    font-size:20px;
-    	    text-decoration:none;    	
-    	    color:#555555;        
-	    width: 40px;
-    	    height:40px;
-    	    border-radius: 5px;
-    	    border: 1.2px solid #555555;
-    	    transition: transform .1s; 	
+            .left {
+                font-size: 16px;
+            }
+
+            .capt {
+                padding: 2% 5%;
+            }
         }
 
-        .download:hover{
-	    background-color: #657cfd;
-	    text-decoration: none;
-            color: white;         
-            transition: transform .9s; 	
-	    -ms-transform: scale(1.1); /* IE 9  */
-	    -webkit-transform: scale(1.1); /* Safari 3-8  */
-            transform: scale(1.1);
-	    transform: scale(1.1);	
+        /* Small mobile screen adjustments */
+        @media (max-width: 480px) {
+            .abt {
+                font-size: 18px;
+                padding: 0 5%;
+            }
+
+            .capt {
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            .left {
+                font-size: 14px;
+            }
+
+            .Image {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .skills table {
+                font-size: 14px;
+            }
+
+            .ic {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
+                width: 50px;
+                height: 40px;
+                padding: 3px;
+            }
         }
 
-
-
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        /* Responsive layout for mobile screens */
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
         }
-
-        .section p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* About  */
-        #about{
-            color: #555555;
-            font-size: 16px;
-            line-height: 24px;
-            padding-bottom: 3%;
-        }
-
-        .skills{
-            width: 40%;            
-        }
-
-        .skls{
-            padding-left: 30%;
-        }
-
-        .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
-            border: 0.9px solid rgb(155, 155, 155);
-            padding: 6px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
-            transition: transform .4s;
-        }
-
-        .figma:hover, .figjam:hover, .sketch:hover, .invision:hover, .balsamiq:hover, .lucidchart:hover, .axurerp:hover, .xd:hover, .ps:hover, .illustrator:hover, .blender:hover, .github:hover, .oliveeditor:hover, .audacity:hover, .html:hover, .css:hover, .js:hover, .np:hover, .vs:hover {
-            background-color: rgb(255, 255, 255);
-            transform: scale(1.1);
-        }
-
-        .Image{
-            float: left;
-            position: relative;
-            padding-left: 5%;
-            padding-top: 2%;
-            opacity: 0.7;
-            transition: 2s;
-            margin: 0 auto;
-        }
-        .Image:hover{
-            opacity: 1;
-            transition: 4s;
-        }
-
-        .Image:hover {
-            -ms-transform: scale(1.2); /* IE 9  */
-            -webkit-transform: scale(1.2); /* Safari 3-8  */
-            transform: scale(1.2); 
-        }
-
-        .abt{
-            padding-top: 1%;        
-            padding-left: 30%;
-            max-width: 60%;
-            color: #555555;
-        }
-
-        .left{
-            float: left;
-            padding-left: 2%;
-            color: #555555;
-            font-size: 18px;
-            max-width: 340px;
-     }
-
-    /* Projects */
-    .project-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);            
-            gap: 20px;            
-            padding-left: 10%;
-            padding-right: 10%;
-        }
-        .card {
-            border: 1px solid #ccc;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.5s ease;
-        }
-
-        .card:hover img {
-            transform: scale(1.05);
-        }
-
-        .card a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #657cfd;
-        }
-
-        a:hover{
-            text-decoration: underline;
-        }
-        
-        .card p{
-            font-size: 18px;
-        }        
-
-
-    /* Contact  */
-    .contact{		
-        padding-top: 3%;
-        padding-right: 30%;        
-        padding-left: 3%;
-        text-align: left;
-	    color:#555555;
-	    font-size:16px;
-        line-height: 25px;
-    }
-
-    #ty{
-	    font-family:'Great Vibes';	
-	    font-size:60px;	
-        padding-left: 7%;	    
-        text-align: center;
-	    line-height:90px;
-	    letter-spacing:4px;
-	    background: linear-gradient(90deg, rgba(255,195,120,1) 0%, rgba(193,122,34,1) 50%, rgba(255,195,120,1) 80%);
-	    -webkit-text-fill-color: transparent; 
-        -webkit-background-clip: text;
-    }
-
-    /* Footer */
-    footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-    }
-
-    footer a {
-            color: #ff5722;
-            text-decoration: none;
-    }
-
     </style>
 </head>
 <body>
@@ -357,55 +450,125 @@
             <a href="Asset/GOVARDHANAGIRIV.pdf" target="_blank" download class="download">Download My Resume</a><br><br><br>
         </div>
             
-            <!--Logo -->
+    <!-- Logo -->
         <div class="logo">
             <img src="Asset/Vardhan2.png" alt="Vardhan" width="350" height="400">
         </div>
     </div>
 
+    <!-- About -->
     <div id="about" class="section">
-        <div class="Image">
-            <img src="Asset/img.png" alt="Vardhan" height="250px">
-        </div>
-        <p>
-            <div class="abt">
-                This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.<br><br>
-                <strong style="font-size: 18px;"><u>UI/UX SKILLS</u>&nbsp;:-</strong><br><br>
-                * User-Centered Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Design Thinking Methodology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Double Diamond Methodology<br>
-                * User Research Techniques&nbsp;&nbsp;(Qualitative and Quantitative)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Personas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                * Empathy Mapping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>*&nbsp;Information Architecture&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* White Boarding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * Story Boarding&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                * User Journey Mapping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>* Low & High-Fidelity Wireframing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Design System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* UI Style Guide&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* UI Mock-Up Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-                * Interactive Prototyping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* WCAG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Usability Testing&nbsp;&nbsp;&nbsp;&nbsp;* Heuristic Evaluation&nbsp;&nbsp;&nbsp;&nbsp;* VIMM Model.<br><br>          
-                <strong style="font-size: 18px;"><u>TOOLS & TECHNOLOGIES</u>&nbsp;:-</strong><br><br>
+        <p class="abt">This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.</p>        
+        <div class="capt">
+            <div class="Image">
+                <img src="C:\Users\Admin\Downloads\Asset\img.png" alt="Vardhan" height="250px">    
             </div>
             <div class="left">
-                'I design user-centric, engaging, and responsive digital experiences.<br><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="background-color: rgba(252, 255, 75, 0.562)"><u>Let's bring the ideas to life!</u></font>
-            </div>            
-            <div class="skls">
-                <img class="figma" src="Asset/figma.png" alt="Figma" style="width:80px">&nbsp;&nbsp;								
-                <img class="figjam" src="Asset/figjam.png" alt="FigJam" style="width:80px">&nbsp;&nbsp;
-                <img class="sketch" src="Asset/sketch.png" alt="Sketch" style="width:80px">&nbsp;&nbsp;
-                <img class="invision" src="Asset/invision.png" alt="InVision" style="width:80px">&nbsp;&nbsp;
-                <img class="axurerp" src="Asset/axurerp.png" alt="Axure RP" style="width:80px">&nbsp;&nbsp;
-                <img class="lucidchart" src="Asset/lucidchart.png" alt="Lucidchart" style="width:80px">&nbsp;&nbsp;
-                <img class="balsamiq" src="Asset/balsamiq.png" alt="Balsamiq" style="width:80px">&nbsp;&nbsp;<br>
-                <img class="xd" src="Asset/xd.png" alt="Adobe XD" style="width:80px">&nbsp;&nbsp;
-                <img class="ps" src="Asset/ps.png" alt="Photoshop" style="width:80px">&nbsp;&nbsp;
-                <img class="illustrator" src="Asset/illustrator.png" alt="Illustrator" style="width:80px"><br>                
-                <img class="blender" src="Asset/blender.png" alt="Blender" style="width:80px">&nbsp;&nbsp;
-                <img class="oliveeditor" src="Asset/oliveeditor.png" alt="Olive Editor" style="width:80px">&nbsp;&nbsp;
-                <img class="audacity" src="Asset/audacity.png" alt="Audacity" style="width:80px">&nbsp;&nbsp;<br>
-                <img class="github" src="Asset/github.png" alt="GitHub" style="width:80px">&nbsp;&nbsp;
-                <img class="html" src="Asset/html.png" alt="HTML" style="width:80px">&nbsp;&nbsp;
-                <img class="css" src="Asset/css.png" alt="CSS" style="width:80px">&nbsp;&nbsp;
-                <img class="js" src="Asset/js.png" alt="JavaScript" style="width:80px">&nbsp;&nbsp;
-                <img class="np" src="Asset/np.png" alt="Node.js" style="width:80px">&nbsp;&nbsp;
-                <img class="vs" src="Asset/vs.png" alt="Visual Studio" style="width:80px">
-            </div>		
-        </p>
+                'I design user-centric, engaging, and responsive digital experiences'<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="background-color: rgba(252, 255, 75, 0.562)">Let's bring the ideas to life!</font>
+            </div>        
+        </div> 
+        <div class="skills">
+            <strong style="font-size: 18px;"><u>UI/UX SKILLS</u>&nbsp;:-</strong><br>
+            <table style="padding-left: 10%; padding-bottom: 1%;">
+                <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐ User-Centered Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>⭐ Design Thinking Methodology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>⭐ Double Diamond Methodology</td>
+                </tr>
+            </table>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                    <td>⭐ User Research Techniques</td>
+                    <td>⭐ User Personas</td>
+                    <td>⭐ Empathy Mapping</td>
+                    <td>⭐ Information Architecture</td>
+                </tr>
+                <tr>            
+                    <td>⭐ White Boarding</td>
+                    <td>⭐ Story Boarding</td>
+                    <td>⭐ User Journey Mapping</td>
+                    <td>⭐ Low & High-Fidelity Wireframes</td>
+                </tr>
+                <tr>
+                    <td>⭐ Design System</td>
+                    <td>⭐ UI Style Guide</td>
+                    <td>⭐ UI Mock-Up Designing</td>
+                    <td>⭐ Interactive Prototyping</td>
+                </tr>
+                <tr>
+                    <td>⭐ WCAG</td>
+                    <td>⭐ Usability Testing</td>
+                    <td>⭐ Heuristic Evaluation</td>
+                    <td>⭐ VIMM Model</td>
+                </tr>
+            </table>            
+        </div>
+        <div class="tt">
+            <strong style="font-size: 18px;"><u>TOOLS & TECHNOLOGIES</u>&nbsp;:-</strong><br><br>
+            <div class="ic">
+                <div class="list">
+                    <img class="figma" src="Asset/figma.png" alt="Figma">
+                </div>
+                <div class="list">
+                    <img class="figjam" src="Asset/figjam.png" alt="FigJam">
+                </div>
+                <div class="list">
+                    <img class="sketch" src="Asset/sketch.png" alt="Sketch">
+                </div>
+                <div class="list">
+                    <img class="invision" src="Asset/invision.png" alt="InVision">            
+                </div>
+                <div class="list">
+                    <img class="axurerp" src="Asset/axurerp.png" alt="Axure RP">            
+                </div>
+                <div class="list">
+                    <img class="lucidchart" src="Asset/lucidchart.png" alt="Lucidchart">            
+                </div>
+                <div class="list">
+                    <img class="balsamiq" src="Asset/balsamiq.png" alt="Balsamiq">            
+                </div>
+                <div class="list">
+                    <img class="xd" src="Asset/xd.png" alt="Adobe XD">            
+                </div>
+                <div class="list">
+                    <img class="ps" src="Asset/ps.png" alt="Photoshop">            
+                </div>
+                <div class="list">
+                    <img class="illustrator" src="Asset/illustrator.png" alt="Illustrator">            
+                </div>
+                <div class="list">
+                    <img class="blender" src="Asset/blender.png" alt="Blender">            
+                </div>
+                <div class="list">
+                    <img class="oliveeditor" src="Asset/oliveeditor.png" alt="Olive Editor">            
+                </div>
+                <div class="list">
+                    <img class="audacity" src="Asset/audacity.png" alt="Audacity">            
+                </div>
+                <div class="list">
+                    <img class="github" src="Asset/github.png" alt="GitHub">            
+                </div>
+                <div class="list">
+                    <img class="html" src="Asset/html.png" alt="HTML">
+                </div>
+                <div class="list">
+                    <img class="css" src="Asset/css.png" alt="CSS">
+                </div>
+                <div class="list">
+                    <img class="js" src="Asset/js.png" alt="JavaScript">
+                </div>
+                <div class="list">
+                    <img class="np" src="Asset/np.png" alt="Node.js">
+                </div>
+                <div class="list">
+                    <img class="vs" src="Asset/vs.png" alt="Visual Studio">
+                </div> 
+            </div>
+        </div>
     </div>
 
+    <!-- Projects -->
     <div id="projects" class="section">
         <div class="project-cards">            
             <div class="card">                                
@@ -462,7 +625,7 @@
                 <p>Manage and pay medical bills efficiently with a convenient, secure mobile billing solution.</p>
                 <a href="9.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
-            <div class="card">                                
+            <div class="card">                                 
                 <img src="Asset/gd.png" alt="" width="100%">
                 <h3>Graphic Designing</h3>
                 <p>This contains visually appealing designs that communicate messages effectively across various media.</p>
@@ -471,6 +634,7 @@
         </div>
     </div>
 
+    <!-- Contacts -->
     <div id="contact" class="section">
         <div class="logo"> 
             <img src="Asset/Vardhan2.png" alt="Vardhan" width="350" height="400">
