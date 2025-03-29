@@ -163,25 +163,66 @@
             padding-bottom: 3%;
         }
 
-        .left {
-            padding-top: 3%;
+        .caption {
+            padding-top: 2%;
             font-size: 20px;
             text-align: center;
         }
 
+        .position {
+            display: flex; justify-content: center; align-items: center;
+            height: 50vh; margin: 0;            
+        }
+
+        .transition {
+            display: flex; justify-content: center; align-items: center;
+            position: relative; width: 300px; height: 340px;
+            background: transparent; cursor: pointer;
+            border: 3px solid transparent; /* Optional, for clarity of borders */
+        }
+
         .Image {
-            position: relative;
-            padding-left: 5%;
-            padding-top: 2%;
-            opacity: 0.7;
-            transition: 2s;
-            margin: 0 auto;
+            opacity: 0.7; transition: 2s; margin: 0;
+        }
+
+        .Image img {
+            width: 90%; height: auto;
+            padding: 10px;
+            background-color: rgba(252, 255, 75, 0.205);
         }
 
         .Image:hover {
-            opacity: 1;
-            transition: 4s;
-            transform: scale(1.2); 
+            border-radius: 5px;
+            background-color: rgba(252, 255, 75, 0.562);
+            opacity: 1; transition: 4s; transform: scale(1.1);
+        }
+
+        .top-border {
+            position: absolute; top: 0; left: 0; width: 100%;
+            height: 3px; background: rgb(255, 196, 0);
+            transform: scaleX(-1); transform-origin: left;
+            transition: transform 1s ease-in-out;
+        }
+
+        .bottom-border {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            height: 3px; background: rgb(255, 196, 0);
+            transform: scaleX(-1); transform-origin: right;
+            transition: transform 1s ease-in-out;
+        }
+
+        .left-border {
+            position: absolute; top: 0; left: 0;
+            width: 3px; height: 100%; background: rgb(255, 196, 0);
+            transform: scaleY(0); transform-origin: bottom;
+            transition: transform 1s ease-in-out;
+        }
+
+        .right-border {
+            position: absolute; top: 0; right: 0; width: 3px;
+            height: 100%; background: rgb(255, 196, 0);
+            transform: scaleY(0); transform-origin: top;
+            transition: transform 1s ease-in-out;
         }
 
         .skills {
@@ -305,7 +346,6 @@
             text-decoration: none;
         }
 
-
         /* Mobile & Tablet View */
         @media screen and (max-width: 768px) {
             nav ul {
@@ -341,32 +381,44 @@
                 margin-bottom: 20px;
             }
 
-            .abt {
+            .p {
                 max-width: 100%;
                 text-align: center;
                 padding-left: 5%;
             }
 
-            .left {
+            .transition {
+                width: 250px;
+                height: 280px;
+            }
+
+            .Image img {
+                width: 80%;
+            }
+
+            .caption {
                 max-width: 100%;
                 text-align: center;
                 padding-left: 0;
             }
 
-            .skls {
+            .skills {
                 width: 100%;
+                padding-top: 10%;
                 padding-left: 0;
                 justify-content: center;
+                font-size: 16px;
+                line-height: 20px;
             }
 
             .figma, .figjam, .sketch, .invision, .balsamiq, .lucidchart, .axurerp, .xd, .ps, .illustrator, .blender, .github, .oliveeditor, .audacity, .html, .css, .js, .np, .vs {
                 width: 60px;
-                height: 40px;                
-                padding: 4px;
+                height: 50px;                
+                padding-top: 2%;
             }
 
             /* About Section adjustments for mobile */
-            .abt {
+            .p {
                 padding: 0 5%;
                 font-size: 20px;
             }
@@ -382,7 +434,7 @@
 
         /* Small mobile screen adjustments */
         @media (max-width: 480px) {
-            .abt {
+            .p {
                 font-size: 18px;
                 padding: 0 5%;
             }
@@ -399,10 +451,6 @@
             .Image {
                 width: 70%;
                 margin: 0 auto;
-            }
-
-            .skills table {
-                font-size: 14px;
             }
 
             .ic {
@@ -460,24 +508,32 @@
     <div id="about" class="section">
         <p class="abt">This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.</p>        
         <div class="capt">
-            <div class="Image">
-                <img src="Asset/img.png" alt="Vardhan" height="250px">    
+            <div class="position">
+                <div class="transition">
+                    <div class="top-border"></div>
+                    <div class="left-border"></div>  
+                    <div class="Image">
+                        <img src="Asset/img.png" alt="Vardhan" height="250px">    
+                    </div>
+                    <div class="bottom-border"></div>
+                    <div class="right-border"></div>
+                </div>
             </div>
-            <div class="left">
+            <div class="caption">
                 'I design user-centric, engaging, and responsive digital experiences'<br><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="background-color: rgba(252, 255, 75, 0.562)">Let's bring the ideas to life!</font>
             </div>        
         </div> 
         <div class="skills">
             <strong style="font-size: 18px;"><u>UI/UX SKILLS</u>&nbsp;:-</strong><br>
-            <table style="padding-left: 10%; padding-bottom: 1%;">
+            <table style="padding-left: 10%; padding-bottom: 1%; font-size: 18px; padding-top: 2%;">
                 <tr>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⭐ User-Centered Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>⭐ User-Centered Designing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>⭐ Design Thinking Methodology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td>⭐ Double Diamond Methodology</td>
                 </tr>
             </table>
-            <table style="width: 100%; border-collapse: collapse;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 18px;">
                 <tr>
                     <td>⭐ User Research Techniques</td>
                     <td>⭐ User Personas</td>
@@ -702,6 +758,23 @@
                 window.scrollTo(0, savedPosition);
             }
         }
+
+        // Transition for the about section image
+        const box = document.querySelector('.transition');
+
+        box.addEventListener('mouseenter', () => {
+            document.querySelector('.top-border').style.transform = 'scaleX(2)';
+            document.querySelector('.bottom-border').style.transform = 'scaleX(2)';
+            document.querySelector('.left-border').style.transform = 'scaleY(1)';
+            document.querySelector('.right-border').style.transform = 'scaleY(1)';
+        });
+
+        box.addEventListener('mouseleave', () => {
+            document.querySelector('.top-border').style.transform = 'scaleX(-1)';
+            document.querySelector('.bottom-border').style.transform = 'scaleX(-1)';
+            document.querySelector('.left-border').style.transform = 'scaleY(0)';
+            document.querySelector('.right-border').style.transform = 'scaleY(0)';
+        });
 
         // Initialize active link based on scroll position when the page loads
         window.addEventListener('DOMContentLoaded', () => {
