@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Govardhana Giri's Portfolio</title>
-    <link rel="icon" type="image" href="Asset/Icon.png"> 
+    <title>UI/UX Designer Portfolio</title>
     <style>
         html {
             scroll-behavior: smooth;
         }
-	img {
+        
+	    img {
         pointer-events: none;
         }
 	    
@@ -22,6 +22,42 @@
         }
 
         /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(29, 29, 29, 0.6);
+            z-index: 100;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            padding: 10px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f79518;;
+        }
+
+        /* Active Menu Link */
         nav {
             position: fixed;
             top: 0;
@@ -86,6 +122,15 @@
         .section {
             padding: 60px 30px;
         }
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #555;
+        }
 
         /* HOME Section */
         
@@ -115,8 +160,7 @@
         .home{        
             justify-content: center;
             padding-top: 7%;
-        }
-    
+        }    
 
         .download{	
 	        padding-inline:40px;  	
@@ -143,18 +187,7 @@
 	        transform: scale(1.1);	
         }
 
-    
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        /* About Section */
+        /* About */
         .abt { 
             font-size: 30px;
             text-align: center;
@@ -314,8 +347,8 @@
             text-decoration: underline;
         }
 
-        /* Contact  */
-	#contact{            
+        /* Contact */
+        #contact{            
         padding-top: 1%;
         }
 	    
@@ -323,8 +356,8 @@
             padding-right: 30%;        
             padding-left: 7%;
             text-align: left;
-	    color:#555555;
-	    font-size:18px;
+	        color:#555555;
+	        font-size:18px;
             line-height: 25px;
         }
 
@@ -478,6 +511,7 @@
                 width: 100%;
             }
         }
+
     </style>
 </head>
 <body>
@@ -486,6 +520,7 @@
     <nav>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul class="menu">
+            <!-- <li><a href="#home" class="active" onclick="setActive('home')">HOME</a></li> -->
             <li><a href="#home" onclick="setActive('home')">HOME</a></li>
             <li><a href="#about" onclick="setActive('about')">ABOUT</a></li>
             <li><a href="#projects" onclick="setActive('projects')">MY PROJECTS</a></li>
@@ -494,7 +529,7 @@
         <div class="clse" onclick="toggleMenu()">&times;</div>
     </nav>
 
-    <!-- Sections -->
+    <!-- Home Section -->
     <div id="home" class="section">
         <div class="intro">
             <font style="font-size: 45px; font-weight: bold;">
@@ -511,7 +546,7 @@
         </div>
     </div>
 
-    <!-- About -->
+    <!-- About Section -->
     <div id="about" class="section">
         <p class="abt">This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing, located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.</p>        
         <div class="capt">
@@ -631,7 +666,7 @@
         </div>
     </div>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <div id="projects" class="section">
         <div class="project-cards">            
             <div class="card">                                
@@ -697,7 +732,7 @@
         </div>
     </div>
 
-    <!-- Contacts -->
+    <!-- Contact Section -->
     <div id="contact" class="section">
         <div class="logo"> 
             <img src="Asset/Vardhan2.png" alt="Vardhan" width="350" height="400">
@@ -713,11 +748,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 UI/UX Designer Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 UI/UX Designer Portfolio. All rights reserved. <a href="v.govardhan@gmail.com">Contact Me</a></p>
     </footer>
 
     <script>
-        // Toggle menu for mobile view
         function toggleMenu() {
             const menu = document.querySelector('nav ul');
             menu.classList.toggle('show');
@@ -727,44 +761,59 @@
         function setActive(section) {
             const links = document.querySelectorAll('nav a');
             links.forEach(link => {
-                link.classList.remove('active');
-            });
-            const activeLink = document.querySelector(`nav a[href="#${section}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-
-        // Scroll event listener to add/remove active class based on the scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.section');
-            let currentSection = '';
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 0 && rect.bottom >= 0) {
-                    currentSection = section.id;
+                if (link.getAttribute('href').substring(1) === section) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
                 }
             });
-            setActive(currentSection);
+        }
+    </script>
+
+    <script>
+        // The JavaScript code from earlier goes here //
+        // Function to add the active class to the correct nav link
+        function setActive(section) {
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+            link.classList.remove('active');  // Remove active class from all links //
+                if (link.getAttribute('href').substring(1) === section) {
+                link.classList.add('active');  // Add active class to the current section's link //
+                }
+            });
+        }
+
+        // Scroll event listener to check which section is in view
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            let currentSection = '';
+    
+            sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.id;
+            }
         });
 
-        // Restore scroll position when returning to the page
-        window.onload = function() {
-            restoreScrollPosition();
-        };
+        setActive(currentSection);  // Update the active class based on the current section //
+        });
 
-        // Function to save scroll position
-        function saveScrollPosition() {
-            sessionStorage.setItem('scrollPosition', window.scrollY);
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section');
+        let currentSection = '';
+    
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.id;
         }
+        });
 
-        // Function to restore scroll position
-        function restoreScrollPosition() {
-            const savedPosition = sessionStorage.getItem('scrollPosition');
-            if (savedPosition !== null) {
-                window.scrollTo(0, savedPosition);
-            }
-        }
+        setActive(currentSection);  // Set the active link on page load //
+        });
 
         // Transition for the about section image
         const box = document.querySelector('.transition');
@@ -782,19 +831,7 @@
             document.querySelector('.left-border').style.transform = 'scaleY(0)';
             document.querySelector('.right-border').style.transform = 'scaleY(0)';
         });
+</script> 
 
-        // Initialize active link based on scroll position when the page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.section');
-            let currentSection = '';
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 0 && rect.bottom >= 0) {
-                    currentSection = section.id;
-                }
-            });
-            setActive(currentSection);
-        });
-    </script>
 </body>
 </html>
