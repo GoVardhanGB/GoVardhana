@@ -7,9 +7,9 @@
     <link rel="icon" type="image" href="Asset/Icon.png"> 
     <style>
         html {
-            scroll-behavior: smooth;
+        scroll-behavior: smooth;
         }
-	    
+
         body {
             margin: 0;
             padding: 0;
@@ -65,14 +65,14 @@
         .hamburger {
             display: none;
             font-size: 30px;
-            color: #555;
+            color: #555555;
             cursor: pointer;
         }
 
         .clse {
             display: none;
             font-size: 30px;
-            color: #555;
+            color: #555555;
             position: absolute;
             top: 10px;
             right: 20px;
@@ -82,6 +82,16 @@
         /* Section */
         .section {
             padding: 60px 30px;
+        }
+
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #555;
         }
 
         /* HOME Section */
@@ -138,17 +148,6 @@
 	        -webkit-transform: scale(1.1); /* Safari 3-8  */
             transform: scale(1.1);
 	        transform: scale(1.1);	
-        }
-
-    
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .section p {
-            font-size: 18px;
-            color: #555;
         }
 
         /* About Section */
@@ -313,7 +312,7 @@
 
         /* Contact  */
 	    #contact{            
-        padding-top: 1%;
+            padding-top: 1%;
         }
 	    
         .contact{		
@@ -360,7 +359,7 @@
                 top: 50px;
                 left: 0;
                 width: 100%;
-                background-color: rgba(255, 255, 255, 0.7);
+                background-color: rgba(202, 202, 202, 0.7);
             }
 
             nav ul.show {
@@ -475,6 +474,7 @@
                 width: 100%;
             }
         }
+
     </style>
 </head>
 <body>
@@ -483,6 +483,7 @@
     <nav>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         <ul class="menu">
+            <!-- <li><a href="#home" class="active" onclick="setActive('home')">HOME</a></li> -->
             <li><a href="#home" onclick="setActive('home')">HOME</a></li>
             <li><a href="#about" onclick="setActive('about')">ABOUT</a></li>
             <li><a href="#projects" onclick="setActive('projects')">MY PROJECTS</a></li>
@@ -491,7 +492,7 @@
         <div class="clse" onclick="toggleMenu()">&times;</div>
     </nav>
 
-    <!-- Sections -->
+    <!-- Home Section -->
     <div id="home" class="section">
         <div class="intro">
             <font style="font-size: 45px; font-weight: bold;">
@@ -508,7 +509,7 @@
         </div>
     </div>
 
-    <!-- About -->
+    <!-- About Section -->
     <div id="about" class="section">
         <p class="abt">This is Govardhana Giri Vannuranna Gari, a Senior Technical Lead Specialized in UI/UX Designing, located in Bengaluru, India. I have overall 10+ years of experience in designing engaging & delightful digital, AR/VR, Mobile & Web product interfaces with a focus on UX.</p>        
         <div class="capt">
@@ -628,73 +629,73 @@
         </div>
     </div>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <div id="projects" class="section">
         <div class="project-cards">            
             <div class="card">                                
                 <img src="Asset/ds.png" alt="DesignSystem" width="100%">
                 <h3>Design System</h3>
                 <p>This Design System contains a complete set of standards intended to manage consistency in designs, at a scale of reusable components and patterns.</p>
-                <a href="1.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
+                <a href="1 - Copy.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro1.png" alt="" width="100%">
                 <h3>AR/VR Virtual Store</h3>
                 <p>Users can explore immersive shopping experiences with AR/VR technology, transforming users retail environments virtually.</p>
-                <a href="2.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
+                <a href="2 - Copy.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro2.png" alt="" width="100%">
                 <h3>AR/VR Planogram</h3>
                 <p>Visualizing and optimizing product layouts using AR/VR for effective in-store merchandising and planning.</p>
-                <a href="3.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
+                <a href="3 - Copy.html" target="_self" onclick="saveScrollPosition()">View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro3.png" alt="" width="100%">
                 <h3>AR/VR WindMill</h3>
                 <p>Experience realistic AR/VR windmill simulations for design, operation, and maintenance training.</p>
-                <a href="4.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="4 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro4.png" alt="" width="100%">
                 <h3>Minerva IoT</h3>
                 <p>Streamlining employee schedules, tasks, and communication with an intuitive mobile management platform.</p>
-                <a href="5.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="5 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro5.png" alt="" width="100%">
                 <h3>MedTel</h3>
                 <p>Effortlessly schedule medical appointments and manage consultations with a user-friendly mobile app.<br><br></p>
-                <a href="6.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="6 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro6.png" alt="" width="100%">
                 <h3>StoreKing</h3>
                 <p>Seamless shopping with this feature-rich e-commerce app, this app offers secure payments and personalized recommendations.</p>
-                <a href="7.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="7 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro7.png" alt="" width="100%">
                 <h3>EZ Event</h3>
                 <p>Simplifying event ticket sales, bookings, and entry management through a robust web platform.<br><br></p>
-                <a href="8.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="8 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                
                 <img src="Asset/Pro8.png" alt="" width="100%">
                 <h3>Patient Billing</h3>
                 <p>Manage and pay medical bills efficiently with a convenient, secure mobile billing solution.</p>
-                <a href="9.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="9 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>
             <div class="card">                                 
                 <img src="Asset/gd.png" alt="" width="100%">
                 <h3>Graphic Designing</h3>
                 <p>This contains visually appealing designs that communicate messages effectively across various media.</p>
-                <a href="10.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
+                <a href="10 - Copy.html" target="_self" onclick="saveScrollPosition()"> View Case Study</a>
             </div>            
         </div>
     </div>
 
-    <!-- Contacts -->
+    <!-- Contact Section -->
     <div id="contact" class="section">
         <div class="logo"> 
             <img src="Asset/Vardhan2.png" alt="Vardhan" width="350" height="400">
@@ -710,7 +711,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 UI/UX Designer Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Govardhana Giri Portfolio. All rights reserved. <a href="v.govardhan@gmail.com">Contact Me</a></p>
     </footer>
 
     <script>
@@ -724,26 +725,54 @@
         function setActive(section) {
             const links = document.querySelectorAll('nav a');
             links.forEach(link => {
-            link.classList.remove('active');
-            });
-            const activeLink = document.querySelector(`nav a[href="#${section}"]`);
-            if (activeLink) {
-                activeLink.classList.add('active');
+            if (link.getAttribute('href').substring(1) === section) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
             }
+            });
         }
 
-        // Scroll event listener to add/remove active class based on the scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.section');
-            let currentSection = '';
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 0 && rect.bottom >= 0) {
-                    currentSection = section.id;
-                }
-            });
-            setActive(currentSection);
+        // The JavaScript code from earlier goes here //
+        // Function to add the active class to the correct nav link
+        function setActive(section) {
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+        link.classList.remove('active');  // Remove active class from all links //
+        if (link.getAttribute('href').substring(1) === section) {
+            link.classList.add('active');  // Add active class to the current section's link //
+        }
         });
+        }
+
+        // Scroll event listener to check which section is in view
+        window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.section');
+        let currentSection = '';    
+        sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.id;
+        }
+        });
+        setActive(currentSection);  // Update the active class based on the current section //
+        });
+
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section');
+        let currentSection = '';    
+        sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.id;
+        }
+        });
+        setActive(currentSection);  // Set the active link on page load //
+        });
+
 
         // Restore scroll position when returning to the page
         window.onload = function() {
@@ -763,35 +792,23 @@
             }
         }
 
-        // Initialize active link based on scroll position when the page loads
-        window.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.section');
-            let currentSection = '';
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top <= 0 && rect.bottom >= 0) {
-                    currentSection = section.id;
-                }
-            });
-            setActive(currentSection);
-        });
 
         // Transition for the about section image
         const box = document.querySelector('.transition');
-
         box.addEventListener('mouseenter', () => {
-            document.querySelector('.top-border').style.transform = 'scaleX(2)';
-            document.querySelector('.bottom-border').style.transform = 'scaleX(2)';
-            document.querySelector('.left-border').style.transform = 'scaleY(1)';
-            document.querySelector('.right-border').style.transform = 'scaleY(1)';
+        document.querySelector('.top-border').style.transform = 'scaleX(2)';
+        document.querySelector('.bottom-border').style.transform = 'scaleX(2)';
+        document.querySelector('.left-border').style.transform = 'scaleY(1)';
+        document.querySelector('.right-border').style.transform = 'scaleY(1)';
         });
 
         box.addEventListener('mouseleave', () => {
-            document.querySelector('.top-border').style.transform = 'scaleX(-1)';
-            document.querySelector('.bottom-border').style.transform = 'scaleX(-1)';
-            document.querySelector('.left-border').style.transform = 'scaleY(0)';
-            document.querySelector('.right-border').style.transform = 'scaleY(0)';
+        document.querySelector('.top-border').style.transform = 'scaleX(-1)';
+        document.querySelector('.bottom-border').style.transform = 'scaleX(-1)';
+        document.querySelector('.left-border').style.transform = 'scaleY(0)';
+        document.querySelector('.right-border').style.transform = 'scaleY(0)';
         });
-    </script>
+    </script> 
+
 </body>
 </html>
